@@ -1,1 +1,56 @@
-<p>card1 works!</p>
+ <!--marcador # para interes en-->
+ <div id="a inicio"></div><!--redireccion interna enfoca mejor-->
+
+ <!-- 1°card: banner, foto, info pers, icono y boton edicion -->
+ <div class="card">
+
+    <app-banner></app-banner>
+     
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-12 col-sm-10">
+                 <div class="d-flex">
+                     <img src="./assets/persona.jpg" class="carnet" alt="persona">
+                     <div class="fotoPincel">
+                         <button type="button" class="bi bi-pencil" data-bs-toggle="modal"
+                             data-bs-target="#PersonaModal"></button>
+                     </div>
+                 </div>
+                 <div class="card-body">
+                     <h5 class="card-title">Milo dEscorpio</h5>
+                     <span>Full Stack
+                         Developer Jr</span>
+                     <p class="card-text">Informatico en Curso <br>Buenos Aires (Argentina) <a href="https://ar.linkedin.com"
+                             class="card-link"> o_o Hablemos por linkedin -_o </a></p>
+                 </div>
+             </div>
+
+             <div id="deMi"></div>
+             <!--marcador # para interes en redireccion interna enfoca mejor -->
+
+             <div id="logo-derecho" class="col-xs-12 col-sm-2">
+                 <img class="logo" id="logo-derecho-lugar" src="./assets/logo-argprog.png" alt="logo arg programa">Argentina
+                 Programa
+             </div>
+         </div>
+         <div class="btn-group dropend">
+             <div type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown"
+                 data-bs-auto-close="true" aria-expanded="false">
+                 Tengo interés en
+             </div>
+             <!--borde color azul (primary, ej verde: success)-->
+             <div class="dropdown-menu border border-primary">
+                 <a class="dropdown-item" href="#deMi">Acerca de Mi</a>
+                 <a class="dropdown-item" href="#experiencia">Experiencia</a>
+                 <a class="dropdown-item" href="#educacion">Educación</a>
+                 <a class="dropdown-item" href="#habilidad">Habilidades/Skills</a>
+                 <a class="dropdown-item" href="#proyectos">Proyectos</a>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+
+ <!--marcador # para interes en-->
+ <div id="experiencia"></div><!--redireccion interna enfoca mejor-->
