@@ -1,5 +1,5 @@
 {
-    "id":" ",
+    "id": " ",
     "nombreYapellido": "Milo Escorpio",
     "fondo": "./assets/fondo5jpg",
     "fotoPersona": "./assets/persona.jpg",
@@ -7,76 +7,83 @@
     "localidad": "Buenos Aires (Argentina)",
     "contacto": " o_o Hablemos por linkedin -_o ",
     "contactoLink": "https://ar.linkedin.com",
-    "logoDerecha":"./assets/logo-argprog.png",
-
-    "school": {
-        "name": "Universidad de Buenos Aires",
-        "img": "./assets/logo-argprog.png",
-        "url": "#"
-    },
-    "ubication": "Buenos Aires (Argentina) ",
-    "abaut": "Matematico, físico e informatico argentino",
-    "experience": [{
-            "position": "Backend Developer",
-            "company": "Pixar",
-            "imag": "./assets/logo-CONICET.png",
-            "mode": "Jornada parcial",
-            "start": "mar 2019",
-            "end": "actualidad",
-            "timeElapsed": "2 años y 6 meses"
-    }],
-    "education": [{
-            "school": "UTN",
-            "title": "Ingeniería",
-            "img": "./assets/logo-argprog.png",
-            "career": "Sistemas Computacionales",
-            "score": 0,
-            "start": "2019",
-            "end": "2023"
-        },
+    "logoDerecha": "./assets/logo-argprog.png",
+    "experiencias": [
         {
-            "school": "Centro de Enseñanza Técnico",
-            "title": "Tecnologo",
-            "img": "./assets/logo-CONICET.png",
-            "career": "Desarrollo de Software",
-            "score": 82,
-            "start": "2014",
-            "end": "2018"
-        },
-        {
-            "school": "Escuela Secundaria Técnico",
-            "title": "Técnico",
-            "img": "./assets/logo-uniBSAS.png",
-            "career": "Electronica, comunicacion",
-            "score": 0,
-            "start": "2012",
-            "end": "2014"
+            "logoExper": "./assets/logo-CONICET.png",
+            "establecimExper": "Pixar",
+            "puestoExper": "Jornada parcial",
+            "fechasExper": "22 de marzo de 2019"
         }
     ],
-    "aptitudes": [{
-            "name": "Resolución de problemas",
-            "progress": 75,
-            "confirms": 2,
-            "confirmsNames": [{
-                "name": "Milo dEscorpio"
-            }]
+    "educaciones": [
+        {
+            "logoEduca": "./assets/logo-argprog.png",
+            "establecimEduca": "UTN",
+            "puestoEduca": "Sistemas Computacionales",
+            "fechasEduca": "del 2019 al 2020"
         },
         {
-            "name": "Diseño de Sistemas",
-            "progress": 3,
-            "confirmsNames": [{
-                "name": "Milo dEscorpio"
-            }]
+            "logoEduca": "./assets/logo-CONICET.png",
+            "establecimEduca": "Centro de Enseñanza Técnico",
+            "puestoEduca": "Sistemas Computacionales",
+            "fechasEduca": "del 2021 al 2022"
+        },
+        {
+            "logoEduca": "./assets/logo-uniBSAS.png",
+            "establecimEduca": "Centro de Enseñanza Técnico",
+            "puestoEduca": "Técnico",
+            "fechasEduca": "desde el 2022 hasta la actualidad"
         }
     ],
-    "achivements": [{
-            "name": "Huaro App"
+    "habilidades": [
+        {
+            "nombreHabili": "HTML",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 75,
+            "textoBarraHabili": "75%"
         },
         {
-            "name": "Lanterns 19/09"
+            "nombreHabili": "CSS",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 75,
+            "textoBarraHabili": "75%"
+        },
+        {
+            "nombreHabili": "Js",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 75,
+            "textoBarraHabili": "75%"
+        },
+        {
+            "nombreHabili": "Ts",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 75,
+            "textoBarraHabili": "75%"
+        },
+        {
+            "nombreHabili": "Java",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 75,
+            "textoBarraHabili": [
+                {
+                    "name": "¿ 75% ?"
+                }
+            ]
+        }
+    ],
+    "proyectos": [
+        {
+            "logoProye": "./assets/logo-CONICET.png",
+            "nombreProye": "Desarrollo de Paginas",
+            "descriProye": "Jornada parcial usando el buscador para informarme",
+            "direUrlProye": "https://www.google.com/"
+        },
+        {
+            "logoProye": "./assets/logo-persona.jpg ",
+            "nombreProye": "Pixar",
+            "descriProye": "Jornada parcial",
+            "direUrlProye": "https://www.pixar.com/"
         }
     ]
-
-
 }
-

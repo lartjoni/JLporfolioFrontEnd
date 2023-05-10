@@ -16,13 +16,13 @@
         <div *ngFor="let experiencia of experienciaList">
             <div class="row" id="filaEspacio">
                 <div class="col-xs-12 col-sm-2" logo>
-                    <img id="lugares-logo" class="logo" [src]="experiencia.imag" alt="logo arg programa">
+                    <img id="lugares-logo" class="logo" [src]="experiencia.logoExper" alt="logo arg programa">
                 </div>
                 <div class="col-xs-12 col-sm-8" id=medio>
-                    <h4 class="card-title">{{experiencia.position}} </h4>
+                    <h4 class="card-title">{{experiencia.establecimExper}} </h4>
 
-                    <p>seccion, expecialidades</p>
-                    <p><strong>fechas</strong></p><strong>
+                    <p>{{experiencia.puestoExper}}</p>
+                    <p><strong>{{experiencia.fechasExper}}</strong></p><strong>
                     </strong>
 
                 </div>

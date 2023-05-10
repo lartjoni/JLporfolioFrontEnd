@@ -13,13 +13,13 @@
 <div *ngFor="let educacion of educacionList">
     <div class="row" id="filaEspacio">
         <div class="col-xs-12 col-sm-2" logo>
-            <img id="lugares-logo" class="logo" [src]="educacion.img" alt="logo arg programa">
+            <img id="lugares-logo" class="logo" [src]="educacion.logoEduca" alt="logo arg programa">
         </div>
         <div class="col-xs-12 col-sm-8" id=medio>
-            <h4 class="card-title">{{educacion.name}} </h4>
+            <h4 class="card-title">{{educacion.establecimEduca}} </h4>
 
-            <p>seccion, expecialidades</p>
-            <p><strong>fechas</strong></p><strong>
+            <p>{{educacion.puestoEduca}} </p>
+            <p><strong>{{educacion.fechasEduca}}</strong></p><strong>
             </strong>
         </div>
         <div class="col-xs-12 col-sm-2" id=editores>
