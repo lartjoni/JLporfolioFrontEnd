@@ -14,6 +14,7 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectoComponent
+    ProyectoComponent,
   ],
   imports: [
     BrowserModule,
