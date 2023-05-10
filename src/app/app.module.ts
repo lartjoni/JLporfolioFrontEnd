@@ -12,8 +12,8 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
-
-
+import { PortfolioService } from './servicios/portfolio.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

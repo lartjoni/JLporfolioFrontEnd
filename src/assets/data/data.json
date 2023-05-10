@@ -1,0 +1,82 @@
+{
+    "id":" ",
+    "nombreYapellido": "Milo Escorpio",
+    "fondo": "./assets/fondo5jpg",
+    "fotoPersona": "./assets/persona.jpg",
+    "oficio": "Full Stack Developer Jr",
+    "localidad": "Buenos Aires (Argentina)",
+    "contacto": " o_o Hablemos por linkedin -_o ",
+    "contactoLink": "https://ar.linkedin.com",
+    "logoDerecha":"./assets/logo-argprog.png",
+
+    "school": {
+        "name": "Universidad de Buenos Aires",
+        "img": "./assets/logo-argprog.png",
+        "url": "#"
+    },
+    "ubication": "Buenos Aires (Argentina) ",
+    "abaut": "Matematico, físico e informatico argentino",
+    "experience": [{
+            "position": "Backend Developer",
+            "company": "Pixar",
+            "imag": "./assets/logo-CONICET.png",
+            "mode": "Jornada parcial",
+            "start": "mar 2019",
+            "end": "actualidad",
+            "timeElapsed": "2 años y 6 meses"
+    }],
+    "education": [{
+            "school": "UTN",
+            "title": "Ingeniería",
+            "img": "./assets/logo-argprog.png",
+            "career": "Sistemas Computacionales",
+            "score": 0,
+            "start": "2019",
+            "end": "2023"
+        },
+        {
+            "school": "Centro de Enseñanza Técnico",
+            "title": "Tecnologo",
+            "img": "./assets/logo-CONICET.png",
+            "career": "Desarrollo de Software",
+            "score": 82,
+            "start": "2014",
+            "end": "2018"
+        },
+        {
+            "school": "Escuela Secundaria Técnico",
+            "title": "Técnico",
+            "img": "./assets/logo-uniBSAS.png",
+            "career": "Electronica, comunicacion",
+            "score": 0,
+            "start": "2012",
+            "end": "2014"
+        }
+    ],
+    "aptitudes": [{
+            "name": "Resolución de problemas",
+            "progress": 75,
+            "confirms": 2,
+            "confirmsNames": [{
+                "name": "Milo dEscorpio"
+            }]
+        },
+        {
+            "name": "Diseño de Sistemas",
+            "progress": 3,
+            "confirmsNames": [{
+                "name": "Milo dEscorpio"
+            }]
+        }
+    ],
+    "achivements": [{
+            "name": "Huaro App"
+        },
+        {
+            "name": "Lanterns 19/09"
+        }
+    ]
+
+
+}
+

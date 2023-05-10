@@ -1,7 +1,6 @@
 <!--3°card: experiencia y educacion boton edicion-->
 <div class="card">
     <div class="card-body">
-
         <div class="row">
             <div class="col-10" medio>
                 <h3 class="card-title">Experiencia</h3>
@@ -14,34 +13,34 @@
             </div>
         </div>
 
+        <div *ngFor="let experiencia of experienciaList">
+            <div class="row" id="filaEspacio">
+                <div class="col-xs-12 col-sm-2" logo>
+                    <img id="lugares-logo" class="logo" [src]="experiencia.imag" alt="logo arg programa">
+                </div>
+                <div class="col-xs-12 col-sm-8" id=medio>
+                    <h4 class="card-title">{{experiencia.position}} </h4>
 
-        <div class="row" id="filaEspacio">
-            <div class="col-xs-12 col-sm-2" logo>
-                <img id="lugares-logo" class="logo" src="./assets/logo-argprog.png" alt="logo arg programa">
+                    <p>seccion, expecialidades</p>
+                    <p><strong>fechas</strong></p><strong>
+                    </strong>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-2" id=editores>
+
+                    <button tipe="button" data-bs-toggle="modal" data-bs-target="#experienciaModal"
+                        data-bs-whatever="SACARESTO?@mdo">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+
+                    <button tipe="submit" class=""><i class="bi bi-trash3"></i></button>
+                </div>
+
             </div>
-            <div class="col-xs-12 col-sm-8" id=medio>
-                <h4 class="card-title">Nombre de Lugares </h4>
-
-                <p>seccion, expecialidades</p>
-                <p><strong>fechas</strong></p><strong>
-                </strong>
-
-            </div>
-
-            <div class="col-xs-12 col-sm-2" id=editores>
-
-                <button tipe="button" data-bs-toggle="modal" data-bs-target="#experienciaModal"
-                    data-bs-whatever="SACARESTO?@mdo">
-                    <i class="bi bi-pencil"></i>
-                </button>
-
-                <button tipe="submit" class=""><i class="bi bi-trash3"></i></button>
-            </div>
-
         </div>
 
         <app-educacion></app-educacion>
-
 
     </div>
 </div>
