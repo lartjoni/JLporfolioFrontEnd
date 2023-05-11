@@ -1,0 +1,45 @@
+    <!--4°card: habilidades-Skills, barra progres y boton edicion-->
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-10" medio>
+                    <h5 class="card-title">Hard Skills & Soft Skills</h5>
+                </div>
+                <div class="col-2" editores>
+                    <button tipe="button" data-bs-toggle="modal" data-bs-target="#habilidadNuevaModal"
+                        data-bs-whatever="QUEHACE?@mdo">
+                        <i class="bi bi-plus-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <div *ngFor="let habilidad of habilidadList">
+            <div class="row">
+                <div class="col-2" logo>
+                </div>
+                
+                <div class="col-8" medio>
+                    <p>{{habilidad.nombreHabili}}</p>
+                    <div class="progress mb-5">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" [style.width.%]="habilidad.barraProgreso">
+                            <p>{{habilidad.barraProgreso}}%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2 editores"> <button tipe="button" data-bs-toggle="modal"
+                        data-bs-target="#habilidadModal" data-bs-whatever="SACARESTO?@mdo">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+
+                    <button tipe="submit" class=""><i class="bi bi-trash3"></i></button>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+<!--marcador # para interes en-->
+<div id="proyectos"></div><!--redireccion interna enfoca mejor-->

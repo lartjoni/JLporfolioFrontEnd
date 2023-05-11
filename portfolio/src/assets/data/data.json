@@ -1,0 +1,83 @@
+{
+    
+    "id": " ",
+    "nombreYapellido": "Milo Escorpio",
+    "fondo": "./assets/fondo5.jpg",
+    "fotoPersona": "./assets/persona.jpg",
+    "oficio": "Full Stack Developer Jr",
+    "localidad": "Buenos Aires (Argentina)",
+    "contacto": " o_o Hablemos por linkedin -_o ",
+    "contactoLink": "https://ar.linkedin.com",
+    "logoDerecha": "./assets/logo-argprog.png",
+    "textoDerecho": "Argentina Programa",
+
+    "acercaDeMi": "ejemplo rapido para construir sobre el titulo de la tarjeta y compensar la mayor parte del contenido de la tarjeta",
+
+    "experiencias": [
+        {
+            "logoExper": "./assets/logo-CONICET.png",
+            "establecimExper": "Pixar",
+            "puestoExper": "Jornada parcial",
+            "fechasExper": "22 de marzo de 2019"
+        }
+    ],
+    "educaciones": [
+        {
+            "logoEduca": "./assets/logo-argprog.png",
+            "establecimEduca": "UTN",
+            "puestoEduca": "Sistemas Computacionales",
+            "fechasEduca": "del 2019 al 2020"
+        },
+        {
+            "logoEduca": "./assets/logo-CONICET.png",
+            "establecimEduca": "Centro de Enseñanza Técnico",
+            "puestoEduca": "Sistemas Computacionales",
+            "fechasEduca": "del 2021 al 2022"
+        },
+        {
+            "logoEduca": "./assets/logo-uniBSAS.png",
+            "establecimEduca": "Centro de Enseñanza Técnico",
+            "puestoEduca": "Técnico",
+            "fechasEduca": "desde el 2022 hasta la actualidad"
+        }
+    ],
+    "habilidades": [
+        {
+            "nombreHabili": "HTML",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 80
+        },
+        {
+            "nombreHabili": "CSS",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 80
+        },
+        {
+            "nombreHabili": "Js",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 60
+        },
+        {
+            "nombreHabili": "Ts",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 65
+        },
+        {
+            "nombreHabili": "Java",
+            "colorBarraHabili": "Azul",
+            "barraProgreso": 70
+        }
+    ],
+    "proyectos": [
+        {
+            "nombreProye": "Desarrollo de Paginas",
+            "descriProye": "Jornada parcial usando el buscador para informarme",
+            "direUrlProye": "https://www.google.com/"
+        },
+        {
+            "nombreProye": "Pixar",
+            "descriProye": "Jornada parcial",
+            "direUrlProye": "https://www.pixar.com/"
+        }
+    ]
+}
