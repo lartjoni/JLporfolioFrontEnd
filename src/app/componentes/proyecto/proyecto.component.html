@@ -7,7 +7,7 @@
                 <div class="col-10" medio>
                     <h3 class="card-title">Proyectos</h3>
                 </div>
-                <div class="col-2" editores>
+                <div class="col-2 d-flex justify-content-end align-items-end" editores>
                     <button tipe="button" data-bs-toggle="modal" data-bs-target="#proyectoNuevoModal"
                         data-bs-whatever="QUEHACE?@mdo">
                         <i class="bi bi-plus-lg"></i>
@@ -15,20 +15,15 @@
                 </div>
             </div>
 
+            <div *ngFor="let proyecto of proyectoList">
             <div class="row" id="filaEspacio">
-                <div class="col-xs-12 col-sm-2" logo>
-                    <img id="lugares-logo" class="logo" src="./assets/logo-argprog.png" alt="logo arg programa">
-                </div>
-                <div class="col-xs-12 col-sm-8" id=medio>
-                    <a href="http://google.com" target="_blank" rel="noopener noreferrer">
-                        <h4 class="card-title">Nombre de Lugares </h4>
+                <div class="col-xs-12 col-sm-10" id=medio>
+                    <a [href]="proyecto.direUrlProye" target="_blank" rel="noopener noreferrer">
+                        <h4 class="card-title">{{proyecto.nombreProye}}</h4>
                     </a>
-                    <p><strong>Some quick example text to build on the card title and make up the bulk
-                            of the card's
-                            content.</strong></p><strong>
-                    </strong>
+                    <p><strong>{{proyecto.descriProye}}</strong></p>
                 </div>
-                <div class="col-xs-12 col-sm-2" id=editores>
+                <div class="col-xs-12 col-sm-2 d-flex justify-content-end align-items-end " id=editores>
                     <button tipe="button" data-bs-toggle="modal" data-bs-target="#proyectoModal"
                         data-bs-whatever="SACARESTO?@mdo">
                         <i class="bi bi-pencil"></i>
@@ -37,6 +32,7 @@
                 </div>
 
             </div>
+        </div>
 
         </div>
     </div>

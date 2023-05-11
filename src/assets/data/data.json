@@ -1,13 +1,18 @@
 {
+    
     "id": " ",
     "nombreYapellido": "Milo Escorpio",
-    "fondo": "./assets/fondo5jpg",
+    "fondo": "./assets/fondo5.jpg",
     "fotoPersona": "./assets/persona.jpg",
     "oficio": "Full Stack Developer Jr",
     "localidad": "Buenos Aires (Argentina)",
     "contacto": " o_o Hablemos por linkedin -_o ",
     "contactoLink": "https://ar.linkedin.com",
     "logoDerecha": "./assets/logo-argprog.png",
+    "textoDerecho": "Argentina Programa",
+
+    "acercaDeMi": "ejemplo rapido para construir sobre el titulo de la tarjeta y compensar la mayor parte del contenido de la tarjeta",
+
     "experiencias": [
         {
             "logoExper": "./assets/logo-CONICET.png",
@@ -40,47 +45,36 @@
         {
             "nombreHabili": "HTML",
             "colorBarraHabili": "Azul",
-            "barraProgreso": 75,
-            "textoBarraHabili": "75%"
+            "barraProgreso": 80
         },
         {
             "nombreHabili": "CSS",
             "colorBarraHabili": "Azul",
-            "barraProgreso": 75,
-            "textoBarraHabili": "75%"
+            "barraProgreso": 80
         },
         {
             "nombreHabili": "Js",
             "colorBarraHabili": "Azul",
-            "barraProgreso": 75,
-            "textoBarraHabili": "75%"
+            "barraProgreso": 60
         },
         {
             "nombreHabili": "Ts",
             "colorBarraHabili": "Azul",
-            "barraProgreso": 75,
-            "textoBarraHabili": "75%"
+            "barraProgreso": 65
         },
         {
             "nombreHabili": "Java",
             "colorBarraHabili": "Azul",
-            "barraProgreso": 75,
-            "textoBarraHabili": [
-                {
-                    "name": "¿ 75% ?"
-                }
-            ]
+            "barraProgreso": 70
         }
     ],
     "proyectos": [
         {
-            "logoProye": "./assets/logo-CONICET.png",
             "nombreProye": "Desarrollo de Paginas",
             "descriProye": "Jornada parcial usando el buscador para informarme",
             "direUrlProye": "https://www.google.com/"
         },
         {
-            "logoProye": "./assets/logo-persona.jpg ",
             "nombreProye": "Pixar",
             "descriProye": "Jornada parcial",
             "direUrlProye": "https://www.pixar.com/"

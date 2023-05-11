@@ -13,18 +13,20 @@
                     </button>
                 </div>
             </div>
+            <div *ngFor="let habilidad of habilidadList">
             <div class="row">
                 <div class="col-2" logo>
                 </div>
+                
                 <div class="col-8" medio>
-                    <p>texto referencia a barra</p>
-                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">
-                            <p>75% a cambiar?</p>
+                    <p>{{habilidad.nombreHabili}}</p>
+                    <div class="progress mb-5">
+                        <div class="progress-bar" [style.width.%]="habilidad.barraProgreso">
+                            <p>{{habilidad.barraProgreso}}%</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-2 editores"> <button tipe="button" data-bs-toggle="modal"
                         data-bs-target="#habilidadModal" data-bs-whatever="SACARESTO?@mdo">
                         <i class="bi bi-pencil"></i>
@@ -34,6 +36,7 @@
                     
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
