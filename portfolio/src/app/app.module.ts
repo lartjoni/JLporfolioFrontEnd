@@ -37,7 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [PortfolioService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

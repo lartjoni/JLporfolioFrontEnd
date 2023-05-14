@@ -13,7 +13,7 @@ url = "http://localhost:8080/" ;
   constructor(private http: HttpClient) {
 
    }
-   verEducaciones(): Observable<Educacion[]> {
+   Educaciones(): Observable<Educacion[]> {
     return this.http.get<any>(this.url + "educaciones/ver");
   }
 

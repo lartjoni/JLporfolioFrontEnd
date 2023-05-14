@@ -9,113 +9,135 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
-export class EducacionComponent implements OnInit{
+export class EducacionComponent implements OnInit {
 
-  educacionList :Educacion[] = []; //puedo cambiar por otro alias
-  constructor(private educacionService:EducacionService) {}
+  educacionList: any; //puedo cambiar por otro alias
+
+  
+/* teorias:
+persona: persona=new persona("","","",""); 
+  constructor(public personaService: PersonaService) { } */
+  constructor(private educacionService: EducacionService) { }
 
   ngOnInit(): void {
-    this.verEducaciones()
+    this.verEducaciones();
   }
 
-  verEducaciones(): void{
-    this.educacionService.verEducaciones().subscribe(data => {
+   
+  verEducaciones(): void {
+    this.educacionService.Educaciones().subscribe(data => {
       this.educacionList = data;
     })
   }
 
-  newEnviar($event: any) {
+ 
+  
+  /* newEnviar($event: any) {
     throw new Error('Method not implemented.');
-    }
+  }
   Enviar($event: any) {
     throw new Error('Method not implemented.');
-    }
+  } */
 
-    delete(id?: number){
-      if(id != undefined){
-        if(confirm('!!warning!! se borrara una Educacíon, Esta seguro?')) 
-        this.educacionService.borrarEducacion(id).subscribe(
-          data => {
-            this.verEducaciones();
-            window.location.reload;
-          }
-        )
-      }
-    } 
+  /* delete(id?: number){
+    if(id != undefined){
+      if(confirm('!!warning!! se borrara una Educacíon, Esta seguro?')) 
+      this.educacionService.borrarEducacion(id).subscribe(
+        data => {
+          this.verEducaciones();
+         // window.location.reload; no veo diferencia
+        }
+      )
+    }
+  }   */
+
+  delete(id?: number) {
+    if (id != undefined && (confirm('!!warning!! se borrara una Educacíon, Esta seguro?'))) {
+      this.educacionService.borrarEducacion(id).subscribe(
+        data => {
+           this.verEducaciones();
+           alert('Eliminado correctamente'); //no sale esto :(
+          
+        }
+        
+      )
+    }
+  }
+
 
 
 }
 //window.location.reload   a ver si recarga la pagina pero igual arreglar bug de imagenYdatos
-        
-        /* otra solucion sacado de youtobe el de 100
-         
-  ¿como poner esto:  {(confirm('!!warning!! se borrara una Educacíon, Esta seguro?'))}    en ese if ?
 
-        delete(id?: number){
-    if(id != undefined){
-      this.educacionService.borrarEducacion(id).subscribe(
-        data => {
-          this.verEducaciones();
-        }, err => {
-          alert("error al borrar, intente de nuevo");
-           }
-      )
-    }
-  }
-        */
+/* otra solucion sacado de youtobe el de 100
+ 
+¿como poner esto:  {(confirm('!!warning!! se borrara una Educacíon, Esta seguro?'))}    en ese if ?
 
- /*  agregarEducacion(): void{
-    this.educacionService.agregarEducacion().subscribe(data => {
-      this = data;
-    })
-  } 
+delete(id?: number){
+if(id != undefined){
+this.educacionService.borrarEducacion(id).subscribe(
+data => {
+  this.verEducaciones();
+}, err => {
+  alert("error al borrar, intente de nuevo");
+   }
+)
+}
+}
+*/
 
-    buscarEducacion(): void{
-    this.educacionService.buscarEducacion().subscribe(data => {
-      this.educacionList = data;
-    })
-  }
+/*  agregarEducacion(): void{
+   this.educacionService.agregarEducacion().subscribe(data => {
+     this = data;
+   })
+ } 
 
-  modificarEducacion(): void{
-    this.educacionService.modificarEducacion().subscribe(data => {
-      this.educacionList = data;
-    })
-  }
+   buscarEducacion(): void{
+   this.educacionService.buscarEducacion().subscribe(data => {
+     this.educacionList = data;
+   })
+ }
 
-  borrarEducacion(): void{
-    this.educacionService.verEducaciones().subscribe(data => {
-      this.educacionList = data;
-    })
-  } */
+ modificarEducacion(): void{
+   this.educacionService.modificarEducacion().subscribe(data => {
+     this.educacionList = data;
+   })
+ }
+
+ borrarEducacion(): void{
+   this.educacionService.verEducaciones().subscribe(data => {
+     this.educacionList = data;
+   })
+ } */
 
 
 
-  
-   /* educacion: Educacion = null; 
 
-    form: FormGroup;
-    logoEduca: string;
-    establecimEduca: string;
-    puestoEduca: string;
-    fechasEduca: string; 
+/* educacion: Educacion = null;
 
-    educacionList:any; //puedo cambiar por otro alias
-    constructor(private educacionService:EducacionService) {}
-  
-    ngOnInit(): void {
-    }
-  
-  
-  edEnivar(): void {
-    const id = this.
-    this.educacionService.modificarEducacion(id, this.educacionListion).subscribe(data => {
-      this.educacionList = data;
-    }, err => {
-      alert("Error al modificar educacion");
-    }
-  )
+ form: FormGroup;
+ logoEduca: string;
+ establecimEduca: string;
+ puestoEduca: string;
+ fechasEduca: string; 
+
+ educacionList:any; //puedo cambiar por otro alias
+ constructor(private educacionService:EducacionService) {}
+ 
+ ngOnInit(): void {
+ }
+ 
+ 
+edEnivar(): void {
+ const id = this.
+ this.educacionService.modificarEducacion(id, this.educacionListion).subscribe(data => {
+   this.educacionList = data;
+ }, err => {
+   alert("Error al modificar educacion");
+ }
+)
 } */
-  
+
 
 /* el que estaba antes
 ngOnInit(): void {
@@ -125,4 +147,14 @@ ngOnInit(): void {
     });  
   }
 
+---------------------------
+  delete() {
+    if (window.confirm("¿Realmente quiere eliminar esta entrada?")) {
+    this.eduService.delete(this.item.id).subscribe({
+      next: (x) => {
+        this.eduService.fetchData();
+      },
+    });
+  }
+  }
 */
