@@ -14,6 +14,8 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,19 @@ import { HttpClientModule } from '@angular/common/http';
     EducacionComponent,
     SkillsComponent,
     ProyectoComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+//en providers: [], agrego dentro PorfolioService y automaticamente creo la import de linea 11
+//en imports: [etc,etc, agrego HttpClientModule linea26] y import en 12 tambien manualmente

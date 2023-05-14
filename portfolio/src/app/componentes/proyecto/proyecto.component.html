@@ -37,6 +37,114 @@
         </div>
     </div>
 
+<!-- Modal-6 Proyectos 5°card nuevo-->
+<!-- <div class="modal fade" id="proyectoNuevoModal" tabindex="-1" aria-labelledby="proyectoNuevoModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title fs-3" id="proyectoNuevoModalLabel">Agregar Nuevo Proyecto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
+            name="proyectoNuevoForm">
+
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <h5>Logo</h5>
+                    <input type="url" class="form-control" id="proyectoNuevoLogo"
+                        formControlName="nombreArrayDeTs" placeholder="Ingresar la Url de Imagen">
+                    <label class="form-label" for="proyectoNuevoLogo"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Proyecto</h5>
+                    <input type="text" class="form-control" id="proyectoNuevoNombre"
+                        formControlName="nombreArrayDeTs" placeholder="Ingresar Nombre del Proyecto">
+                    <label class="form-label" for="proyectoNuevoNombre"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Descripcion de Su Funcion en el Proyecto</h5>
+                    <textarea class="form-control" id="proyectoNuevoDescripcion"
+                        formControlName="nombreArrayDeTs" placeholder="Ingresar Puesto"></textarea>
+                    <label class="form-label" for="proyectoNuevoDescripcion"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Direccion Url del Proyecto</h5>
+                    <input type="url" class="form-control" id="proyectoNuevoUrl"
+                        formControlName="nombreArrayDeTs"
+                        placeholder="Ingresar la Url del proyecto para redireccionar">
+                    <label class="form-label" for="proyectoNuevoUrl"></label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-primary">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div> -->
+
+<!-- Modal-6 Proyectos 5°card editar-->
+<!-- <div class="modal fade" id="proyectoModal" tabindex="-1" aria-labelledby="proyectoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-3" id="proyectoModalLabel">Editar Datos </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
+                name="proyectoForm">
+
+                <div class="modal-body">
+
+                    ---  formControlName="nombreArrayDeTs" [(ngModel)]="nombreArrayDeTs"
+                        hoja de Ts se hace una lista o array Tipo jason y eso va
+                        en sus inputs correspondientes ej logo o texto o nombre etc ---------------
+                                                
+
+                    <div class="mb-3">
+                        <h5>Logo</h5>
+                        <input type="url" class="form-control" id="proyectoLogo" formControlName="nombreArrayDeTs"
+                            [(ngModel)]="nombreArrayDeTs">
+                        <label class="form-label" for="proyectoLogo"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Proyecto</h5>
+                        <input type="text" class="form-control" id="proyectoNombre"
+                            formControlName="nombreArrayDeTs" [(ngModel)]="nombreArrayDeTs">
+                        <label class="form-label" for="proyectoNombre"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Descripcion del Proyecto</h5>
+                        <textarea class="form-control" id="proyectoDescripcion" formControlName="nombreArrayDeTs"
+                            [ngModel]="nombreArrayDeTs"></textarea>
+                        <label class="form-label" for="proyectoDescripcion"></label>
+                    </div>
+                    <div class="mb-3">
+                        <h5>Direccion Url del Proyecto</h5>
+                        <input type="url" class="form-control" id="proyectoUrl" formControlName="nombreArrayDeTs"
+                            [(ngModel)]="nombreArrayDeTs">
+                        <label class="form-label" for="proyectoUrl"></label>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+
 
     <footer>
         <div class="d-flex justify-content-center">

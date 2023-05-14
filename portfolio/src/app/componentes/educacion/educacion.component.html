@@ -27,8 +27,8 @@
                 data-bs-whatever="SACARESTO?@mdo">
                 <i class="bi bi-pencil"></i>
             </button>
-            <button tipe="submit" class=""><i class="bi bi-trash3"></i></button>
-
+            <button type="submit" (click)="delete(educacion.id)"><i class="bi bi-trash3"></i></button>
+            <!-- otra forma borrar: <button (click)="delete()">borrar</button>  -->
         </div>
 
     </div>
@@ -38,6 +38,117 @@
     <a href="#" class="-btnCRUD" (click)="delete(educacion.id)">
           <i class="fas fa-trash-alt"></i>
         </a> -->
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+ <!-- Modal-4a Educacion 3°card nuevo + -->
+ <div class="modal fade" id="educacionNuevaModal" tabindex="-1" aria-labelledby="educacionNuevaModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title fs-3" id="educacionNuevaModalLabel">Nueva Educacion</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form class="text-center" forGroupYform (ngSubmit)="Enviar($event)" novalidate
+             name="educacionNuevaForm">
+
+             <div class="modal-body">
+
+                 <div class="mb-3">
+                     <h5>Logo</h5>
+                     <input type="text" class="form-control" id="logoNuevoEdu" formControlName="logoNuevoEduca"
+                         placeholder="Ingresar la Url de Imagen">
+                     <label class="form-label" for="logoNuevoEdu"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Nombre de
+                         Establecimiento</h5>
+                     <input type="text" class="form-control" id="establecimNuevoEdu"
+                         formControlName="establecimNuevoEduca" placeholder="Ingresar Nombre de Establecimiento">
+                     <label class="form-label" for="establecimNuevoEdu"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Puesto</h5>
+                     <textarea class="form-control" id="puestoNuevoEdu" formControlName="puestoNuevoEduca"
+                         placeholder="Ingresar Puesto"></textarea>
+                     <label class="form-label" for="puestoNuevoEdu"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Fechas de Inicio y Fin</h5>
+                     <input type="text" class="form-control" id="fechasNuevaEdu"
+                         formControlName="fechasNuevaEduca" placeholder="Ingresar Fechas de Inicio y Fin">
+                     <label class="form-label" for="fechasNuevaEdu"></label>
+                 </div>
+
+             </div>
+             <div class="modal-footer">
+                 <button type="submit" class="btn btn-outline-primary">Crear</button>
+             </div>
+         </form>
+     </div>
+ </div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Modal-4b Educacion 3°card editar-->
+<!-- <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel" aria-hidden="true">
+ <div class="modal-dialog">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title fs-3" id="educacionModalLabel">Editar Datos de Educacion</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form class="text-center" [formGroup]="form" (ngSubmit)="edEnviar($event)" novalidate
+             name="educacionForm">
+
+             <div class="modal-body">
+
+                 <div class="mb-3">
+                     <h5>Editar Logo</h5>
+                     <input type="url" class="form-control" id="logoExp" formControlName="logoeduca"
+                         [(ngModel)]="educacion.logoEduca">
+                     <label class="form-label" for="logoEdu"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Editar Nombre de
+                         Establecimiento</h5>
+                     <input type="text" class="form-control" id="establecimEdu" formControlName="establecimEduca"
+                         [(ngModel)]="educacion.establecimEduca">
+                     <label class="form-label" for="establecimEdu"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Editar Puesto</h5>
+                     <textarea class="form-control" id="puestoEdu" formControlName="puestoEduca"
+                         [ngModel]="educacion.puestoEduca"></textarea>
+                     <label class="form-label" for="puestoEdu"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Editar Fechas de Inicio y Fin</h5>
+                     <input type="text" class="form-control" id="fechasEdu" formControlName="fechasEduca"
+                         [(ngModel)]="educacion.fechasEduca">
+                     <label class="form-label" for="fechasEdu"></label>
+                 </div>
+
+             </div>
+             <div class="modal-footer">
+                 <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+             </div>
+         </form>
+     </div>
+ </div>
+</div> -->
+
 
 <!--marcador # para interes en-->
 <div id="habilidad"></div><!--redireccion interna enfoca mejor-->

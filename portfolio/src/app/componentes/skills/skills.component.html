@@ -40,6 +40,109 @@
     </div>
  
  
+<!-- Modal-5b habilidades-skills 4°card nueva-->
+<!-- <div class="modal fade" id="habilidadNuevaModal" tabindex="-1" aria-labelledby="habilidadNuevaModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title fs-3" id="habilidadNuevaModalLabel">Nueva Hablilidad </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
+            name="habilidadNuevaForm">
+
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <h5>Habilidad</h5>
+                    <input type="text" class="form-control" id="habilidadNuevaTxt"
+                        formControlName="nombreArrayDeTs" placeholder="Ingresar el nombre de la habilidad">
+                    <label class="form-label" for="habilidadNuevaTxt"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Color de la Barra</h5>
+                    <input type="text" class="form-control" id="barraNuevaColor"
+                        formControlName="nombreArrayDeTs" placeholder="color...">
+                    <label class="form-label" for="barraNuevaColor"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Barra de progreso 1 a 10 </h5>
+                    <input type="text" class="form-control" id="habilidadNuevaBarra"
+                        formControlName="nombreArrayDeTs" placeholder="Ingresar ...">
+                    <label class="form-label" for="habilidadNuevaBarra"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Texto dentro de barra</h5>
+                    <input type="text" class="form-control" id="habilidadNUevaBarraText" NUeva
+                        formControlName="nombreArrayDeTs" placeholder="Ingresar texto dentro de barra">
+                    <label class="form-label" for="habilidadNUevaBarraText"></label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-primary">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div> -->
+
+
+    <!-- Modal-5a habilidades-skills 4°card editar-->
+    <!-- <div class="modal fade" id="habilidadModal" tabindex="-1" aria-labelledby="habilidadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-3" id="habilidadModalLabel">Editar Datos de Habilidad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
+                    name="habilidadForm">
+
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <h5>Habilidad</h5>
+                            <input type="text" class="form-control" id="textoHabi" formControlName="textoHabili"
+                                [(ngModel)]="habilidad.textoHabili">
+                            <label class="form-label" for="textoHabi"></label>
+                        </div>
+
+                        <div class="mb-3">
+                            <h5>Color de la Barra</h5>
+                            <input type="text" class="form-control" id="colorBarra" formControlName="barraHabili"
+                                [(ngModel)]="habilidad.barraHabili">
+                            <label class="form-label" for="colorBarra"></label>
+                        </div>
+
+                        <div class="mb-3">
+                            <h5>Barra de progreso 1 a 10 </h5>
+                            <input type="text" class="form-control" id="barraHabi" formControlName="barraHabili"
+                                [(ngModel)]="habilidad.barraHabili">
+                            <label class="form-label" for="barraHabi"></label>
+                        </div>
+
+                        <div class="mb-3">
+                            <h5>Texto dentro de barra</h5>
+                            <input type="text" class="form-control" id="textoBarraHabi"
+                                formControlName="textoBarraHabili" [(ngModel)]="habilidad.textoBarraHabili">
+                            <label class="form-label" for="textoBarraHabi"></label>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+
 
 <!--marcador # para interes en-->
 <div id="proyectos"></div><!--redireccion interna enfoca mejor-->

@@ -44,3 +44,110 @@
 
     </div>
 </div>
+
+<!-- modal-3a experiencia 3° card nueva + -->
+<!-- <div class="modal fade" id="experienciaNuevaModal" tabindex="-1" aria-labelledby="experienciaNuevaModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title fs-3" id="experienciaNuevaModalLabel">Nueva Experiencia</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
+            name="experienciaNuevaForm">
+
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <h5>Logo</h5>
+                    <input type="url" class="form-control" id="logoNuevoExp" formControlName="logoNuevoExper"
+                        placeholder="Ingresar la Url de Imagen">
+                    <label class="form-label" for="logoNuevoExp"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Nombre de
+                        Establecimiento</h5>
+                    <input type="text" class="form-control" id="establecimNuevoExp"
+                        formControlName="establecimNuevoExper" placeholder="Ingresar Nombre de Establecimiento">
+                    <label class="form-label" for="establecimNuevoExp"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Puesto</h5>
+                    <textarea class="form-control" id="puestoNuevoExp" formControlName="puestoNuevoExper"
+                        placeholder="Ingresar Puesto"></textarea>
+                    <label class="form-label" for="puestoNuevoExp"></label>
+                </div>
+
+                <div class="mb-3">
+                    <h5>Fechas de Inicio y Fin</h5>
+                    <input type="text" class="form-control" id="fechasNuevasExp"
+                        formControlName="fechasNuevasExper" placeholder="Ingresar Fechas de Inicio y Fin">
+                    <label class="form-label" for="fechasNuevasExp"></label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-primary">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div> -->
+
+ <!--Modal-3b Experiencia 3°card editar-->
+<!--  <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="experienciaModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+     <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title fs-3" id="experienciaModalLabel">Editar Datos de Experiencia</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
+             name="experienciaForm">
+
+             <div class="modal-body">
+
+                 <div class="mb-3">
+                     <h5>Cambiar Url del Logo</h5>
+                     <input type="url" class="form-control" id="logoexp" formControlName="logoexper"
+                         [ngModel]="experiencia.logoexper">
+                     <label class="form-label" for="logoexp"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Editar Nombre de
+                         Establecimiento</h5>
+                     <input type="text" class="form-control" id="establecimexp" formControlName="establecimexper"
+                         [ngModel]="experiencia.establecimexper">
+                     <label class="form-label" for="establecimexp"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Editar Puesto</h5>
+                     <textarea class="form-control" id="puestoexp" formControlName="puestoexper"
+                         [ngModel]="experiencia.puestoexper"></textarea>
+                     <label class="form-label" for="puestoexp"></label>
+                 </div>
+
+                 <div class="mb-3">
+                     <h5>Editar Fechas de Inicio y Fin</h5>
+                     <input type="text" class="form-control" id="fechasexp" formControlName="fechasexper"
+                         [ngModel]="experiencia.fechasexper">
+                     <label class="form-label" for="fechasexp"></label>
+                 </div>
+
+             </div>
+             <div class="modal-footer">
+                 <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+             </div>
+         </form>
+     </div>
+ </div>
+</div> -->
+
+
+

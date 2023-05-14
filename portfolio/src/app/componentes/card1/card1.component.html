@@ -46,7 +46,66 @@
     </div>
 </div>
 
+<!-- modal-2 Persona  editar-->
+<!-- <div class="modal fade" id="PersonaModal" tabindex="-1" aria-labelledby="PersonaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" name="PersonaForm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="PersonaModalLabel">Editar Datos de Persona</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        routerLink="/"></button>
+                </div>
 
+                <div class="modal-body">
+
+                    <input type="hidden" formControlName="id" [ngModel]="perso.id">
+
+                    <div class="mb-3">
+                        <h5>Ingresar la Url de la foto</h5>
+                        <input type="url" class="form-control" id="fotoPersona" formControlName="foto"
+                            [ngModel]="perso.foto">
+                        <label class="form-label" for="fotoPersona"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Nombre y Apellido</h5>
+                        <input type="text" class="form-control" id="nombreYapellidoPersona"
+                            formControlName="nombreYapellidoPer" [ngModel]="perso.nombreYapellido">
+                        <label class="form-label" for="nombreYapellidoPersona"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Oficio</h5>
+                        <input type="text" class="form-control" id="oficioPersona" formControlName="oficio"
+                            [ngModel]="perso.oficio">
+                        <label class="form-label" for="oficioPersona"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Localidad</h5>
+                        <input type="text" class="form-control" id="localidadPersona" formControlName="nombre"
+                            [ngModel]="perso.nombre">
+                        <label class="form-label" for="localidadPersona"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Informacion de
+                            Contacto--MaiTo?</h5>
+                        <input type="text" class="form-control" id="contactoPersona" formControlName="contacto"
+                            [ngModel]="perso.contacto">
+                        <label class="form-label" for="contactoPersona"></label>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-primary">Guardar Cambios</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> -->
 
 <!--marcador # para interes en-->
 <div id="experiencia"></div><!--redireccion interna enfoca mejor-->
