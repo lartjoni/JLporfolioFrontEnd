@@ -7,40 +7,43 @@
             data-bs-whatever="QUEHACE?@mdo">
             <i class="bi bi-plus-lg"></i>
         </button>
-        
+
     </div>
 </div>
 
 <div *ngFor="let educacion of educacionList">
-    <div class="row" id="filaEspacio">
-        <div class="col-xs-12 col-sm-2" logo>
-            <img id="lugares-logo" class="logo" [src]="educacion.logoEduca" alt="logo arg programa">
+    <div class="educRow">
+        <div class="row" id="filaEspacio">
+            <div class="col-xs-12 col-sm-2" logo>
+                <img id="lugares-logo" class="logo" [src]="educacion.logoEduca" [alt]="educacion.logoEduca">
+            </div>
+            <div class="col-xs-12 col-sm-8" id=medio>
+                <h4 class="card-title">{{educacion.establecimEduca}} </h4>
+
+                <p>{{educacion.puestoEduca}} </p>
+                <p><strong>{{educacion.fechasEduca}}</strong></p><strong>
+                </strong>
+            </div>
+            <div class="col-xs-12 col-sm-2 d-flex justify-content-end align-items-center" id=editores>
+
+                <button tipe="button" routerLink="/app-educacionedit/y-algo-mas-o-target" data-bs-toggle="modal"
+                    data-bs-target="#educacionModal" data-bs-whatever="SACARESTO?@mdo">
+                    <i class="bi bi-pencil"></i>
+                </button>
+
+                <button (click)="delete(educacion.id)"><i class="bi bi-trash3"></i>
+                </button>
+
+            </div>
+
         </div>
-        <div class="col-xs-12 col-sm-8" id=medio>
-            <h4 class="card-title">{{educacion.establecimEduca}} </h4>
-
-            <p>{{educacion.puestoEduca}} </p>
-            <p><strong>{{educacion.fechasEduca}}</strong></p><strong>
-            </strong>
-        </div>
-        <div class="col-xs-12 col-sm-2 d-flex justify-content-end align-items-end" id=editores>
-
-            <button tipe="button" routerLink="/app-educacionedit/y-algo-mas-o-target" data-bs-toggle="modal" data-bs-target="#educacionModal"
-                data-bs-whatever="SACARESTO?@mdo">
-                <i class="bi bi-pencil"></i>
-            </button>
-
-            <button (click)="delete(educacion.id)"><i class="bi bi-trash3"></i>
-            </button>
-
-        </div>
-
     </div>
+
 </div>
 
 
 <app-educacionew></app-educacionew>
-
+<app-educacionedit></app-educacionedit>
 
 
 <!-- boton borrar ¿?  Y agregar al final <app-educacionedit>etc

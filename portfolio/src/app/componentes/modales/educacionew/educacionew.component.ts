@@ -14,6 +14,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./educacionew.component.css']
 })
 export class EducacionewComponent implements OnInit {
+  
   educacionNuevaForm: FormGroup;
   id?: number;
   logoEduca: '' = "";
@@ -46,12 +47,11 @@ export class EducacionewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAgregar(): void {
+  agregar(): void {
     const educac = new Educacion(this.logoEduca, this.establecimEduca,
       this.puestoEduca, this.fechasEduca);
     this.educacionService.agregarEducacion(educac).subscribe(data => {
       alert("educacion creada correctamente");
-      window.location.reload();
     });
   }
 
@@ -59,9 +59,8 @@ export class EducacionewComponent implements OnInit {
 
 
   onEnviar(event: Event) {
-    event.preventDefault;
     if (this.educacionNuevaForm.value) {
-      this.onAgregar();
+      this.agregar();
     } else {
       alert("error al agregar, intente de nuevo");
       this.educacionNuevaForm.markAllAsTouched();

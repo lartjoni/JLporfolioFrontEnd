@@ -10,11 +10,11 @@
             </div>
             <div class="modal-body">
 
-                <form [formGroup]="educacionNuevaForm" class="text-center" (ngSubmit)="onEnviar($event)" name="">
+                <form [formGroup]="educacionNuevaForm" class="text-center" (ngSubmit)="onEnviar($event)">
                     <div class="mb-3">
                         <h5>Logo</h5>
                         <label class="form-label" for="logoNuevoEdu"></label>
-                        <input type="text" class="form-control" id="logoNuevoEdu" formControlName="logoEduca"
+                        <input type="url" class="form-control" id="logoNuevoEdu" formControlName="logoEduca"
                             placeholder="Ingresar la Url de Imagen" [(ngModel)]="logoEduca">
                     </div>
 
@@ -26,7 +26,7 @@
                         placeholder="Ingresar Nombre de Establecimiento"formControlName="establecimEduca" [(ngModel)]="establecimEduca"
                             [ngClass]="{'is-invalid': EstablecimEduca?.errors && EstablecimEduca?.touched, 'is-valid': !EstablecimEduca?.errors && EstablecimEduca?.touched}"
                             class="form-control" id="establecimNuevoEdu"
-                            placeholder="Ingresar Nombre de Establecimiento">
+                            placeholder="Ingresar Nombre de Establecimiento" required>
                         <div *ngIf="EstablecimEduca?.errors && EstablecimEduca?.touched">
                             <p *ngIf="EstablecimEduca?.hasError('required')" class="text-danger">
                                 El Nombre del Establecimiento es requerido.
@@ -51,7 +51,7 @@
                     </div>
                     
                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-outline-primary">Crear</button>
+                        <button class="btn btn-outline-primary" aria-label="Close">Crear</button>
                     </div>
 
                 </form>

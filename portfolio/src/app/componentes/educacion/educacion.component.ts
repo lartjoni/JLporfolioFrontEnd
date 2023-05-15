@@ -31,27 +31,6 @@ persona: persona=new persona("","","","");
       this.educacionList = data});
   }
 
- 
-  
-  /* newEnviar($event: any) {
-    throw new Error('Method not implemented.');
-  }
-  Enviar($event: any) {
-    throw new Error('Method not implemented.');
-  } */
-
-  /* delete(id?: number){
-    if(id != undefined){
-      if(confirm('!!warning!! se borrara una Educacíon, Esta seguro?')) 
-      this.educacionService.borrarEducacion(id).subscribe(
-        data => {
-          this.verEducaciones();
-         // window.location.reload; no veo diferencia
-        }
-      )
-    }
-  }   */
-
   delete(id?: number) {
     if (id != undefined && (confirm("!!warning!! se borrara una Educacíon, Esta seguro?"))) {
       this.educacionService.borrarEducacion(id).subscribe(
@@ -69,6 +48,24 @@ persona: persona=new persona("","","","");
 
 }
 
+ /* newEnviar($event: any) {
+    throw new Error('Method not implemented.');
+  }
+  Enviar($event: any) {
+    throw new Error('Method not implemented.');
+  } */
+
+  /* delete(id?: number){
+    if(id != undefined){
+      if(confirm('!!warning!! se borrara una Educacíon, Esta seguro?')) 
+      this.educacionService.borrarEducacion(id).subscribe(
+        data => {
+          this.verEducaciones();
+         // window.location.reload; no veo diferencia
+        }
+      )
+    }
+  }   */
 
 /*behaviorSubject esplica en masterclass8v2 q es, y me pa q es pa q lea o recuerde lo ingresado ¿en campo modal? veremos :)
 

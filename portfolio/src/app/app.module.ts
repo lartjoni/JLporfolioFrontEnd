@@ -17,6 +17,15 @@ import { EducacioneditComponent } from './componentes/modales/educacionedit/educ
 import { EducacionewComponent } from './componentes/modales/educacionew/educacionew.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
+import { AcercadenewComponent } from './componentes/modales/acercadenew/acercadenew.component';
+import { BannernewComponent } from './componentes/modales/bannernew/bannernew.component';
+import { Card1newComponent } from './componentes/modales/card1new/card1new.component';
+import { ExperienciaeditComponent } from './componentes/modales/experienciaedit/experienciaedit.component';
+import { ProyectoeditComponent } from './componentes/modales/proyectoedit/proyectoedit.component';
+import { SkillseditComponent } from './componentes/modales/skillsedit/skillsedit.component';
+import { SkillsnewComponent } from './componentes/modales/skillsnew/skillsnew.component';
+import { ProyectonewComponent } from './componentes/modales/proyectonew/proyectonew.component';
+import { ExperiencianewComponent } from './componentes/modales/experiencianew/experiencianew.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +41,15 @@ import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
     EducacionewComponent,
     SkillsComponent,
     ProyectoComponent,
+    AcercadenewComponent,
+    BannernewComponent,
+    Card1newComponent,
+    ExperienciaeditComponent,
+    ProyectoeditComponent,
+    SkillseditComponent,
+    SkillsnewComponent,
+    ProyectonewComponent,
+    ExperiencianewComponent,
   ],
   imports: [
     BrowserModule,

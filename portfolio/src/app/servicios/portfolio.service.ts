@@ -12,7 +12,7 @@ url:string="http://localhost:8080/";
     return this.http.get(this.url+"educacion/ver");//¿q poner despues de this.url? ¿poner aca los crud?¿POST GET PUT DELETE?
     
   }
-  
+    
 }
 
 /*  
