@@ -8,29 +8,29 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-url = "http://localhost:8080/" ;
+url = "http://localhost:8080/educacion/" ;
 
-  constructor(private http: HttpClient) {
+  constructor(private http:HttpClient) {
 
    }
    Educaciones(): Observable<Educacion[]> {
-    return this.http.get<any>(this.url + "educaciones/ver");
+    return this.http.get<any>(this.url + "ver");
   }
 
   agregarEducacion(educacion:Educacion): Observable<Educacion> {
-    return this.http.post<any>(this.url + "educacion/new",educacion);
+    return this.http.post<any>(this.url + "new",educacion);
   }
 
   buscarEducacion(id: number): Observable<any> {
-    return this.http.get<any>(this.url + "educacion/buscar/{id}"+id);
+    return this.http.get<any>(this.url + "buscar/"+id);
   }
 
   modificarEducacion(educacion:Educacion): Observable<any> {
-    return this.http.put<any>(this.url + "educacion/modificar",educacion);
+    return this.http.put<any>(this.url + "modificar",educacion);
   }
 
   borrarEducacion(id: number): Observable<any> {
-    return this.http.delete<any>(this.url + "educacion/delete/"+id);
+    return this.http.delete<any>(this.url + "delete/"+id);
   }
 
 

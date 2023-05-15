@@ -1,0 +1,73 @@
+<!--  Modal-4a Educacion 3°card nuevo + -->
+
+<div class="modal fade" id="educacionNuevaModal" tabindex="-1" aria-labelledby="educacionNuevaModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-3" id="educacionNuevaModalLabel">Nueva Educacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form [formGroup]="educacionNuevaForm" class="text-center" (ngSubmit)="onEnviar($event)" name="">
+                    <div class="mb-3">
+                        <h5>Logo</h5>
+                        <label class="form-label" for="logoNuevoEdu"></label>
+                        <input type="text" class="form-control" id="logoNuevoEdu" formControlName="logoEduca"
+                            placeholder="Ingresar la Url de Imagen" [(ngModel)]="logoEduca">
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Nombre de
+                            Establecimiento</h5>
+                        <label class="form-label" for="establecimNuevoEdu"></label>
+                        <input type="text" class="form-control" id="establecimNuevoEdu"
+                        placeholder="Ingresar Nombre de Establecimiento"formControlName="establecimEduca" [(ngModel)]="establecimEduca"
+                            [ngClass]="{'is-invalid': EstablecimEduca?.errors && EstablecimEduca?.touched, 'is-valid': !EstablecimEduca?.errors && EstablecimEduca?.touched}"
+                            class="form-control" id="establecimNuevoEdu"
+                            placeholder="Ingresar Nombre de Establecimiento">
+                        <div *ngIf="EstablecimEduca?.errors && EstablecimEduca?.touched">
+                            <p *ngIf="EstablecimEduca?.hasError('required')" class="text-danger">
+                                El Nombre del Establecimiento es requerido.
+                            </p>
+                            <p *ngIf="EstablecimEduca?.errors?.['minlength']" class="text-danger">
+                                texto mayor a 3 caracteres.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Puesto</h5>
+                        <textarea class="form-control" id="puestoNuevoEdu" formControlName="puestoEduca" placeholder="Ingresar Puesto" [(ngModel)]="puestoEduca"></textarea>
+                        <label class="form-label" for="puestoNuevoEdu"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Fechas de Inicio y Fin</h5>
+                        <input type="text" class="form-control" id="fechasNuevaEdu" formControlName="fechasEduca"
+                            placeholder="Ingresar Fechas a voluntad ejemplo: de Inicio y Fin, numero o letras" [(ngModel)]="fechasEduca">
+                        <label class="form-label" for="fechasNuevaEdu"></label>
+                    </div>
+                    
+                     <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-primary">Crear</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    <!-- boton pa editar color amarillo = warning 
+                        <button type="button" class="btn btn-outline-warning" ((click)="limpiar()")>Limpiar</button> 
+                    metodo para el .ts :
+                    
+                    limpiar(): void{
+                        this.form.reset();
+                    }
+
+                    -->

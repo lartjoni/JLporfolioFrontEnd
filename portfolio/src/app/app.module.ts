@@ -1,35 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { PortfolioService } from './servicios/portfolio.service';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
-import { LoginComponent } from './componentes/login/login.component';
 import { BannerComponent } from './componentes/banner/banner.component';
 import { Card1Component } from './componentes/card1/card1.component';
 import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { EducacioneditComponent } from './componentes/modales/educacionedit/educacionedit.component';
+import { EducacionewComponent } from './componentes/modales/educacionew/educacionew.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
-import { PortfolioService } from './servicios/portfolio.service';
-import { HttpClientModule } from '@angular/common/http';
-import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PortfolioComponent,
     NavbarComponent,
-    LoginComponent,
     BannerComponent,
     Card1Component,
     AcercadeComponent,
     ExperienciaComponent,
     EducacionComponent,
+    EducacioneditComponent,
+    EducacionewComponent,
     SkillsComponent,
     ProyectoComponent,
-    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

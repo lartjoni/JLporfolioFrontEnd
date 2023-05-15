@@ -1,92 +1,42 @@
-<!-- Modal-0 Iniciar Sesion-->
-
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="loginModalLabel">Iniciar Sesion</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form class="text-center" (ngSubmit)="onEnviar($event)" novalidate name="loginForm">
-                <div class="modal-body">
-
-                    <div class="mb-3">
-                        <input type="mail" class="form-control" id="loginMailPersona" formControlName="loginMail"
-                            placeholder="Ingresar Email aqui...">
-                        <label class="form-label" for="loginMailPersona"></label>
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="password" class="form-control" id="loginPasswordPersona" name="loginPassword"
-                            formControlName="loginPassword" placeholder="Ingresar  Contraseña aqui...">
-                        <label class="form-label" for="loginPasswordPersona"></label>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-outline-success">Ingresar</button>
-                </div>
-            </form>
+<!-- Modal-0 Iniciar Sesion masterclass 8-->
+<!-- <h1 class="m-5">Iniciar Sesion</h1>
+<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" formControlName="email"
+            [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
+            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div *ngIf="Email?.errors && Email?.touched">
+            <p *ngIf="Email?.hasError('required')" class="text-danger">
+                El email es requerido.
+            </p>
+            <p *ngIf="Email?.hasError('email')" class="text-danger">
+                El formato del email debe ser válido.
+            </p>
         </div>
     </div>
-</div>
-<!-- ¿esto va al lado de cada formControlName? [(ngModel)]="perso.loginMail" [(ngModel)]="perso.loginPassword" -->
-
-
-
-<!-- el (ngSubmit)="onEnviar($event)" lo arregle momentaneamente con la solucion del foquito creo en el login.component.ts, pero mejorar -->
-<!-- linea 11 despues class="text-center" [formGroup]="form" y (ngSubmit)="onEnviar($event)" por ahora da error  -->
-<!-- linea 45 despues class="text-center" [formGroup]="form" y (ngSubmit)="onEnviar($event)" por ahora da error [formGroup]="form" -->
-<!-- linea 51 despues de formControlName"fondo" va [(ngModel)]="banner.fondo" por ahora da error-->
-
-
-<!-- 
-        
-        <h1 class="m-5">Iniciar Sesion</h1>
-<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" formControlName="email"  
-    [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
-     class="form-control" id="exampleInputEmail1"
-      aria-describedby="emailHelp">
-    <div *ngIf="Email?.errors && Email?.touched">
-      <p *ngIf="Email?.hasError('required')" class="text-danger">
-        El email es requerido.
-      </p>
-      <p *ngIf="Email?.hasError('email')" class="text-danger">
-        El formato del email debe ser válido.
-      </p>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" formControlName="password" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 
+    'is-valid': !Password?.errors && Password?.touched}" class="form-control" id="exampleInputPassword1">
+        <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">
+                La Contraseña es requerida.
+            </p>
+            <p *ngIf="Password?.errors?.['minlength']" class="text-danger"> --en video de mod8 el minlength no tiene
+                corchetes ni comillas--
+                La Contraseña debe ser de 8 o más caracteres.
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" formControlName="password"
-    [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 
-    'is-valid': !Password?.errors && Password?.touched}"
-    class="form-control" id="exampleInputPassword1">
-    <div *ngIf="Password?.errors && Password?.touched">
-      <p *ngIf="Password?.hasError('required')" class="text-danger">
-        La Contraseña es requerida.
-      </p>
-      <p *ngIf="Password?.errors?.['minlength']" class="text-danger"> --en video de mod8 el minlength no tiene corchetes ni comillas--
-        La Contraseña debe ser de 8 o más caracteres.
-      </p>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
+ -->
 
+<!-- ------------------ -->
 
-     -->
-
-
-
-
-
-      <!-- Modal-0 Iniciar Sesion-->
-
-    <!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<!-- Modal-0 Iniciar Sesion anterior -->
+<!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -116,4 +66,4 @@
             </div>
         </div>
     </div> -->
-    <!-- ¿esto va al lado de cada formControlName? [(ngModel)]="perso.loginMail" [(ngModel)]="perso.loginPassword" -->
+<!-- ¿esto va al lado de cada formControlName? [(ngModel)]="perso.loginMail" [(ngModel)]="perso.loginPassword" -->
