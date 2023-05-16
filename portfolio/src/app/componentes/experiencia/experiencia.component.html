@@ -14,29 +14,31 @@
         </div>
 
         <div *ngFor="let experiencia of experienciaList">
-            <div class="row" id="filaEspacio">
-                <div class="col-xs-12 col-sm-2" logo>
-                    <img id="lugares-logo" class="logo" [src]="experiencia.logoExper" alt="logo arg programa">
+            <div class="educRow">
+                <div class="row" id="filaEspacio">
+                    <div class="col-xs-12 col-sm-2" logo>
+                        <img id="lugares-logo" class="logo" [src]="experiencia.logoExper" alt="logo arg programa">
+                    </div>
+                    <div class="col-xs-12 col-sm-8" id=medio>
+                        <h4 class="card-title">{{experiencia.establecimExper}} </h4>
+
+                        <p>{{experiencia.puestoExper}}</p>
+                        <p><strong>{{experiencia.fechasExper}}</strong></p><strong>
+                        </strong>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2 d-flex justify-content-end align-items-center" id=editores>
+
+                        <button tipe="button" data-bs-toggle="modal" data-bs-target="#experienciaModal"
+                            data-bs-whatever="SACARESTO?@mdo">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+
+                        <button (click)="delete(experiencia.id)" class=""><i class="bi bi-trash3"></i></button>
+                    </div>
+
                 </div>
-                <div class="col-xs-12 col-sm-8" id=medio>
-                    <h4 class="card-title">{{experiencia.establecimExper}} </h4>
-
-                    <p>{{experiencia.puestoExper}}</p>
-                    <p><strong>{{experiencia.fechasExper}}</strong></p><strong>
-                    </strong>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-2 d-flex justify-content-end align-items-end" id=editores>
-
-                    <button tipe="button" data-bs-toggle="modal" data-bs-target="#experienciaModal"
-                        data-bs-whatever="SACARESTO?@mdo">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-
-                    <button (click)="delete(experiencia.id)" class=""><i class="bi bi-trash3"></i></button>
-                </div>
-
             </div>
         </div>
 
@@ -46,61 +48,10 @@
 </div>
 
 <app-experiencianew></app-experiencianew>
-<app-experienciaedit></app-experienciaedit>
+<app-experienciaedit></app-experienciaedit> <!-- no los cargare por andan mal falta mejorarlo -->
 
-<!-- modal-3a experiencia 3° card nueva + -->
-<!-- <div class="modal fade" id="experienciaNuevaModal" tabindex="-1" aria-labelledby="experienciaNuevaModalLabel"
-aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title fs-3" id="experienciaNuevaModalLabel">Nueva Experiencia</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form class="text-center" [formGroup]="form" (ngSubmit)="onEnviar($event)" novalidate
-            name="experienciaNuevaForm">
 
-            <div class="modal-body">
-
-                <div class="mb-3">
-                    <h5>Logo</h5>
-                    <input type="url" class="form-control" id="logoNuevoExp" formControlName="logoNuevoExper"
-                        placeholder="Ingresar la Url de Imagen">
-                    <label class="form-label" for="logoNuevoExp"></label>
-                </div>
-
-                <div class="mb-3">
-                    <h5>Nombre de
-                        Establecimiento</h5>
-                    <input type="text" class="form-control" id="establecimNuevoExp"
-                        formControlName="establecimNuevoExper" placeholder="Ingresar Nombre de Establecimiento">
-                    <label class="form-label" for="establecimNuevoExp"></label>
-                </div>
-
-                <div class="mb-3">
-                    <h5>Puesto</h5>
-                    <textarea class="form-control" id="puestoNuevoExp" formControlName="puestoNuevoExper"
-                        placeholder="Ingresar Puesto"></textarea>
-                    <label class="form-label" for="puestoNuevoExp"></label>
-                </div>
-
-                <div class="mb-3">
-                    <h5>Fechas de Inicio y Fin</h5>
-                    <input type="text" class="form-control" id="fechasNuevasExp"
-                        formControlName="fechasNuevasExper" placeholder="Ingresar Fechas de Inicio y Fin">
-                    <label class="form-label" for="fechasNuevasExp"></label>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-outline-primary">Crear</button>
-            </div>
-        </form>
-    </div>
-</div>
-</div> -->
-
- <!--Modal-3b Experiencia 3°card editar-->
+<!--Modal-3b Experiencia 3°card editar-->
 <!--  <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="experienciaModalLabel"
  aria-hidden="true">
  <div class="modal-dialog">
@@ -151,6 +102,3 @@ aria-hidden="true">
      </div>
  </div>
 </div> -->
-
-
-

@@ -6,7 +6,7 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Observable } from 'rxjs';
 
-//import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+
 
 @Component({
   selector: 'app-educacionew',
@@ -71,59 +71,3 @@ export class EducacionewComponent implements OnInit {
 
 }
 
-
-/* 
-agregar(): void {
-  this.educacionService.agregarEducacion(Educacion).subscribe(data => {
-    console.log(data);
-    this.educacionList = data});
-}
-
-onEnviar(event:Event)
-{
-  event.preventDefault;
-  this.educacionService.agregarEducacion(this.educacionNuevaForm.value).subscribe(Date => {
-    console.log("DATA" + JSON.stringify(Date));
-    this.ruta.navigate(['/portfolio']);
-
-  })
-}
-
-onEnviar(event:Event){
-  event.preventDefault;
-  if(this.agregar.value){
-    this.agregar();
-  }else{
-    alert("error al agregar, intente de nuevo");
-    this.educacionNuevaForm.markAllAsTouched();
-  }
-} 
-
-
-delete(id?: number) {
-  if (id != undefined && (confirm("!!warning!! se borrara una Educacíon, Esta seguro?"))) {
-    this.educacionService.borrarEducacion(id).subscribe(
-      data => {
-        alert("Eliminado correctamente"); //no sale esto :( ¿con onEnviar si?
-         this.verEducaciones();
-        
-      }
-      
-    )
-  }
-}
- */
-
-
-
-/* 
-onEnviar(event:Event){
-  event.preventDefault;
-  if(this.form.valid){
-    this.onCreate();
-  }else{
-    alert("error al agregar, intente de nuevo");
-    this.form.markAllAsTouched();
-  }
-} 
-*/

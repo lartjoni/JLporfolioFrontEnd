@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PersonaService } from 'src/app/servicios/persona.service';
+
 
 @Component({
   selector: 'app-card1',
@@ -7,36 +11,34 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./card1.component.css']
 })
 export class Card1Component implements OnInit {
-miPersona:any; //puedo cambiar por miCard1:any u otro alias
-  constructor(private datosPortfolio:PortfolioService) {}
+
+miPersona:any;
+
+  constructor(private personaService: PersonaService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(dato =>{
-      console.log(dato);
-      this.miPersona=dato;
-    });  
-    
+    this.verPersonas();
   }
 
-  /* 
-  miPersona:any; //puedo cambiar por miCard1:any u otro alias
-  constructor(private datosPortfolio:PortfolioService) {}
-
-  ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(dato =>{
-      console.log(dato);
-      this.miPersona=dato;
-    });  
-    
+   
+  verPersonas(): void {
+    this.personaService.Personas().subscribe(data => {
+      console.log(data);
+      this.miPersona = data});
   }
-  */
+
+  /* buscar(id?: number) {
+    if (id != undefined) {
+      this.personaService.buscarPersona(id).subscribe(
+        data => {
+          alert("Eliminado correctamente"); //no sale esto :( ¿con onEnviar si?
+           this.verPersonas();
+          
+        }
+        
+      )
+    }
+  } */
+
 
 }
-
-
-/* import { PortfolioService } from './servicios/portfolio.service';
-import { HttpClientModule } from '@angular/common' 
-
-pa general archivo.ts dentro de una carpeta por comando:  ng g class model/expe --skip-tests
-y pa service : ng g s servicios/persona --skip-tests
-  */

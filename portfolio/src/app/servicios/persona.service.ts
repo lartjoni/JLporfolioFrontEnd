@@ -3,33 +3,36 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/persona';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
+
+  url = "http://localhost:8080/persona/" ;
+
   constructor(private http: HttpClient) {
     
   }
-  
-  obtenerDatos(): Observable<Persona[]> {
-    return this.http.get<any>("http://localhost:8080/personas/ver/");
-    
+  Personas(): Observable<Persona[]> {
+    return this.http.get<any>(this.url + "ver");
   }
-  
-  
-  /* 
-  url:string="http://localhost:8080/"
-    constructor(private http: HttpClient) {
 
-   }
+  agregarPersona(persona:Persona): Observable<Persona> {
+    return this.http.post<any>(this.url + "new",persona);
+  }
 
-   obtenerDatos(): Observable<Persona[]> {
-    return this.http.get<any>(this.url+"personas/ver");
-   }
-   */
+  buscarPersona(id: number): Observable<any> {
+    return this.http.get<any>(this.url + "buscar/"+id);
+  }
 
-//falta completar el CRUD pero va en porfolio?
+  modificarPersona(persona:Persona): Observable<any> {
+    return this.http.put<any>(this.url + "modificar",persona);
+  }
 
+  borrarPersona(id: number): Observable<any> {
+    return this.http.delete<any>(this.url + "delete/"+id);
+  }
 
 
 }
