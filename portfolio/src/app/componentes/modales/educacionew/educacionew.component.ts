@@ -14,7 +14,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./educacionew.component.css']
 })
 export class EducacionewComponent implements OnInit {
-  
   educacionNuevaForm: FormGroup;
   id?: number;
   logoEduca: '' = "";
@@ -52,6 +51,7 @@ export class EducacionewComponent implements OnInit {
       this.puestoEduca, this.fechasEduca);
     this.educacionService.agregarEducacion(educac).subscribe(data => {
       alert("educacion creada correctamente");
+      window.location.reload();
     });
   }
 

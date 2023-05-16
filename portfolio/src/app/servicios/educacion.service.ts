@@ -35,35 +35,3 @@ url = "http://localhost:8080/educacion/" ;
 
 
 }
-
-/* 
-url = "http://localhost:8080/" ;
-
- constructor(private http: HttpClient) {
-
-   }
-   
-
-
-   }
-   verEducaciones(): Observable<Educacion[]> {
-      return this.http.get<Educacion[]>(this.url + 'educaciones/ver');
-    }
-
-    agregarEducacion(educacion:Educacion): Observable<any> {
-      return this.http.post<any>(this.url + 'educacion/new',Educacion);
-    }
-
-    buscarEducacion(id: number): Observable<any> {
-      return this.http.get<Educacion>(this.url + `educacion/buscar/${id}`);
-    }
-
-    modificarEducacion(id: number, educacion:Educacion): Observable<any> {
-      return this.http.put<any>(this.url + `educacion/modificar"${id}`,Educacion);
-    }
-
-    borrarEducacion(id: number): Observable<any> {
-      return this.http.delete<any>(this.url + `educacion/delete/${id}`);
-    }
-
-*/

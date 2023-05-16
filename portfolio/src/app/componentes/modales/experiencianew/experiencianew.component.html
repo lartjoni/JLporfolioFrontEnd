@@ -1,1 +1,63 @@
-<p>experiencianew works!</p>
+<!-- modal-3a experiencia 3° card nueva + -->
+<div class="modal fade" id="experienciaNuevaModal" tabindex="-1" aria-labelledby="experienciaNuevaModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-3" id="experienciaNuevaModalLabel">Nueva Experiencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="text-center" [formGroup]="experienciaNuevaForm" (ngSubmit)="onEnviar($event)"
+                name="experienciaNuevaForm">
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <h5>Logo</h5>
+                        <input type="url" class="form-control" id="logoNuevoExp" formControlName="logoExper"
+                            placeholder="Ingresar la Url de Imagen" [(ngModel)]="logoExper">
+                        <label class="form-label" for="logoNuevoExp"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Nombre de
+                            Establecimiento</h5>
+                        <label class="form-label" for="establecimNuevoExp"></label>
+                        <input type="text" class="form-control" id="establecimNuevoExp"
+                            formControlName="EstablecimExper" placeholder="Ingresar Nombre de Establecimiento"
+                            [(ngModel)]="establecimExper"
+                            [ngClass]="{'is-invalid': EstablecimExper?.errors && EstablecimExper?.touched, 'is-valid': !EstablecimExper?.errors && EstablecimExper?.touched}"
+                            class="form-control" id="establecimNuevoExp"
+                            placeholder="Ingresar Nombre de Establecimiento" required>
+                        <div *ngIf="EstablecimExper?.errors && EstablecimExper?.touched">
+                            <p *ngIf="EstablecimExper?.hasError('required')" class="text-danger">
+                                El Nombre del Establecimiento es requerido.
+                            </p>
+                            <p *ngIf="EstablecimExper?.errors?.['minlength']" class="text-danger">
+                                texto mayor a 3 caracteres.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Puesto</h5>
+                        <textarea class="form-control" id="puestoNuevoExp" formControlName="EstablecimExper"
+                            placeholder="Ingresar Puesto"[(ngModel)]="establecimExper"></textarea>
+                        <label class="form-label" for="puestoNuevoExp"></label>
+                    </div>
+
+                    <div class="mb-3">
+                        <h5>Fechas de Inicio y Fin</h5>
+                        <input type="text" class="form-control" id="fechasNuevasExp" formControlName="fechasExper"
+                            placeholder="Ingresar Fechas de Inicio y Fin"[(ngModel)]="fechasExper">
+                        <label class="form-label" for="fechasNuevasExp"></label>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-primary">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
