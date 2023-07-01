@@ -66,9 +66,6 @@ export class Card1newComponent implements OnInit {
     }); */
   }
 
-
-
-
   onEnviar(event: Event) {
     if (this.card1form.value) {
       this.agregar();
@@ -78,6 +75,7 @@ export class Card1newComponent implements OnInit {
     }
   }
 
+  
 
 
 

@@ -9,7 +9,7 @@ url:string="http://localhost:8080/";
   constructor(private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get(this.url+"persona/ver");//¿q poner despues de this.url? ¿poner aca los crud?¿POST GET PUT DELETE?
+    return this.http.get(this.url+"experiencia/ver");//¿q poner despues de this.url? ¿poner aca los crud?¿POST GET PUT DELETE?
     
   }
     
